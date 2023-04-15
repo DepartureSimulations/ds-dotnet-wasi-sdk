@@ -103,7 +103,7 @@ public class EmitWasmBundleObjectFile : Microsoft.Build.Utilities.Task, ICancela
         var clangProcess = Process.Start(new ProcessStartInfo
         {
             FileName = ClangExecutable,
-            Arguments = $"-xc -o \"{destinationObjectFile}\" -c -",
+            Arguments = $"-xc -o \"{destinationObjectFile}\" -c -O0",
             RedirectStandardInput = true,
             UseShellExecute = false,
         })!;

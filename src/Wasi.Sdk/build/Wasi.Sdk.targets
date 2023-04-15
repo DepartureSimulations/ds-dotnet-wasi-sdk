@@ -187,7 +187,6 @@
 			<WasmBundleFileToDelete Include="$(_WasmBundleObjectsIntermediateDir)*.o" />
 			<WasmBundleFileToDelete Remove="%(WasmBundleFilesWithHashes.ObjectFile)" />
 		</ItemGroup>
-		<Delete Files="@(WasmBundleFileToDelete)" />
 	</Target>
 	
 	<Target Name="BuildWasm" Inputs="@(BuildWasmInputs)" Outputs="$(WasmOutputIntermediateFile)" DependsOnTargets="GenerateWasmBundleSources">
